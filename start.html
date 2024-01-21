@@ -46,7 +46,7 @@
       background-color: #c0c0c0; /* Metallic color for buttons */
       border: none;
       border-radius: 5px;
-      transition: opacity 0.2s ease; /* Animation transition */
+      transition: opacity 0.5s ease; /* Animation transition */
     }
 
     button:hover {
@@ -97,13 +97,13 @@
   }
 
   function animateButtonClick(callback) {
-    // Animation: Hide the button for 0.2 seconds and then reveal it
+    // Animation: Hide the button immediately and reveal it 0.5 seconds later
     document.activeElement.blur(); // Remove focus from the button to prevent visual glitches
     event.target.style.opacity = 0;
     setTimeout(() => {
       callback();
       event.target.style.opacity = 1;
-    }, 200);
+    }, 500);
   }
 </script>
 
