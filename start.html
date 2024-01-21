@@ -22,6 +22,12 @@
       font-size: 18px; /* Larger font size */
     }
 
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     button {
       margin: 10px; /* Increased margin for better spacing */
       padding: 15px; /* Increased padding for larger buttons */
@@ -42,9 +48,12 @@
 
 <h1>Counter App</h1>
 <p id="countDisplay">Count: 0</p>
-<button onclick="animateButtonClick(increment)">Increment</button>
-<button onclick="animateButtonClick(decrement)">Decrement</button>
-<button onclick="animateButtonClick(reset)">Reset</button>
+
+<div class="button-container">
+  <button onclick="animateButtonClick(increment)">Increase</button>
+  <button onclick="animateButtonClick(reset)">Reset</button>
+  <button onclick="animateButtonClick(decrement)">Decrease</button>
+</div>
 
 <script>
   // JavaScript logic
