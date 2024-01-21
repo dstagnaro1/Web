@@ -25,11 +25,17 @@
       font-size: 18px; /* Larger font size */
     }
 
+    .content-container {
+      display: flex;
+      align-items: center;
+      margin-top: 20px; /* Add margin at the top of the content container */
+    }
+
     .button-container {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-top: 20px; /* Add margin at the top of the button container */
+      margin-right: 20px; /* Add margin to the right of the button container */
     }
 
     button {
@@ -46,19 +52,26 @@
     button:hover {
       background-color: #a0a0a0; /* Darker metallic color on hover */
     }
+
+    #countDisplay {
+      font-size: 36px; /* Larger font size for the counter */
+      margin-left: 20px; /* Add margin to the left of the counter */
+    }
   </style>
 </head>
 <body>
 
 <h1>Counter App</h1>
 
-<div class="button-container">
-  <button onclick="animateButtonClick(increment)">Increase</button>
-  <button onclick="animateButtonClick(reset)">Reset</button>
-  <button onclick="animateButtonClick(decrement)">Decrease</button>
-</div>
+<div class="content-container">
+  <div class="button-container">
+    <button onclick="animateButtonClick(increment)">Increase</button>
+    <button onclick="animateButtonClick(reset)">Reset</button>
+    <button onclick="animateButtonClick(decrement)">Decrease</button>
+  </div>
 
-<p id="countDisplay">Count: 0</p>
+  <p id="countDisplay">Count: 0</p>
+</div>
 
 <script>
   // JavaScript logic
