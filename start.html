@@ -65,9 +65,9 @@
 
 <div class="content-container">
   <div class="button-container">
-    <button onclick="animateButtonClick(increment)">Increase</button>
-    <button onclick="animateButtonClick(reset)">Reset</button>
-    <button onclick="animateButtonClick(decrement)">Decrease</button>
+    <button onclick="animateButtonClick(event, increment)">Increase</button>
+    <button onclick="animateButtonClick(event, reset)">Reset</button>
+    <button onclick="animateButtonClick(event, decrement)">Decrease</button>
   </div>
 
   <p id="countDisplay">Count: 0</p>
@@ -96,14 +96,13 @@
     updateDisplay();
   }
 
-  function animateButtonClick(callback) {
+  function animateButtonClick(event, callback) {
     // Animation: Hide the button immediately and reveal it 0.5 seconds later
-    document.activeElement.blur(); // Remove focus from the button to prevent visual glitches
     event.target.style.opacity = 0;
     setTimeout(() => {
       callback();
       event.target.style.opacity = 1;
-    }, 500);
+    }, 100);
   }
 </script>
 
